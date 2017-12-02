@@ -1,0 +1,26 @@
+下達指令
+ex: shutdown -p now
+    指令    選項 參數 
+    command option 
+
+   選項的兩種表達方式 ex: -h == --help
+
+
+
+特殊按鍵
+1. tab: 具"命令補齊"和"檔案補齊"兩種功能
+        "命令補齊": ex: ca[tab][tab](cal後連按兩次tab 沒有空白鍵)
+                   會出現所有包含cal的指令 如 cal cache cache_check...
+      
+        "檔案補齊": ex: ls -al ~/.bash[tab][tab]
+                   會出現所有包含.bash檔名的檔案
+             
+        特殊:若有裝bash-completion 則在某些時候會出現"補齊參數"而非"檔案補齊"
+             ex: date --[tab][tab] 會出現所有date能用的參數
+
+2. [ctrl]+c: 跟寫java時出錯一樣，可以停止程式運作
+
+3. [ctrl]+d: 和exit的功能一樣，會登出你的帳號       
+
+4. [shift]+PgUp or[shift]+PgDn: 可讓linux翻頁，請用date --help試試
+
