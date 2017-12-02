@@ -64,6 +64,10 @@
 
      注意:info可開許多的說明文件，但只有用"info"格式寫的才能用info模式下的特殊功能
 
+4.whatis：它會顯示出該指令的簡單描述；
+	EX：whatis ls
+	顯示：ls (1)               - list directory contents
+
 4.系統關機前檢查指令:
 
    1.who:看誰在線上
