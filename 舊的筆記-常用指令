@@ -223,5 +223,7 @@
 
 17.顯示目前在哪個目錄: pwd -P
 
-18.
+18.更改檔案姓名：rename 要改的部分 改成甚麼 要改的檔案
+		EX：rename .txt .py test.txt
+19.
 
