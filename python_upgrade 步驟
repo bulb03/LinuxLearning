@@ -5,6 +5,8 @@
 
 在linux上安裝，絕不是跟windows一樣，一路下一步到底這麼簡單，一定要確認好哪些東西在哪裡，網路上的教學的指令到底是甚麼意思，都要弄清楚
 
+註：此文章給使用python開發，但想要在Linux上開發的人比較適合
+
 linux：cent os 7，minimal os
 
 內建Python 版本：2.7.5，欲安裝3.6.3
@@ -19,8 +21,24 @@ linux：cent os 7，minimal os
    
 3. 移至Python-3.6.3：指令：cd Python-3.6.3
 
-4. 開始編譯：注意：這裡就是linux和windows不同的地方，
+4. 開始編譯：注意：這裡就是linux和windows不同的地方，指令：./configure   {未完成}
 
-5. 安裝：
+5. 安裝：指令：make -> 完成後 -> make install   {未完成}
 
-6. 
+到這裡為止，如果途中沒有發生什麼問題，python3.6.3應該安裝完成了，可以打python3來檢查，但你也會發現，我打python所出來的python版本依舊是2.7.5，
+那要怎麼做才能讓python執行的是python2.7.5呢?
+
+先整理一下到目前為止的狀態：centos中應該有python2.7(在/usr/bin/Python2.7) 和 python3.6.3(在/usr/local/bin/python3)，但同時也會發現，有東西是寫：
+
+lrwxrwxrwx.  1 root root         9 Dec  4 10:28 python2 -> python2.7
+-rwxr-xr-x.  1 root root      7136 Aug  4 08:40 python2.7
+lrwxrwxrwx.  1 root root         7 Dec  4 10:28 python -> python2
+
+這些又是甚麼?這些東西叫做連結，有點像windows的捷徑，所以當我們下"python"時，會連結到python2，python2再連到python2.7這檔案，所以，要怎麼讓下python
+時執行的是python3.6.3呢?
+
+rm /usr/bin/python /usr/bin/python.bak {未完成}
+ln -s /usr/local/bin/python /usr/bin/python3 {未完成}
+
+
+
