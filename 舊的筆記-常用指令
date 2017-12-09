@@ -229,5 +229,15 @@
 
 18.更改檔案姓名：rename 要改的部分 改成甚麼 要改的檔案
 		EX：rename .txt .py test.txt
-19.
+
+19. echo使用： 
+		echo 1234 		發出1234這訊息
+		echo 1234 > 檔案		
+		echo 檔案名?		找想要找的檔案     
+		echo File1[a]		找File1開頭a結尾的檔案
+		echo File1[^a] 		找File1開頭不是a結尾的檔案
+		echo File1[a-z]     	找File1開頭a-z結尾的檔案
+		echo F* 		找F開頭的檔案
+		echo *e 		找e結尾的檔案
+		
 
