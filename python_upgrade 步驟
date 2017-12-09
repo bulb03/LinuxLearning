@@ -53,7 +53,10 @@ lrwxrwxrwx.  1 root root         7 Dec  4 10:28 python -> python2
    如此一來，python.bak和python就通通指向python2了
    
    接下來，我們就要把/usr/bin/python指向python3了：
-   指令：ln -s /usr/bin/python /usr/local/bin/python3 (-s 代表建立一個軟連結，軟連結和硬連結的差異請自行google鳥哥，我不想誤人子弟XD)
+   指令：ln -s /usr/bin/python /usr/local/bin/python3 (-s 代表建立一個symbolic連結，差異請自行google鳥哥，我不想誤人子弟XD)
+   
+   [後記：symbolic link和hard link最大的差異就在於即使hard link連結的檔案被刪掉，hard link本身也依舊有東西(就像是複製檔案到hard link裡一樣)
+   symbolic link則不一樣，連結的檔案被刪掉後，它就沒有用了，從格式也可以發現：hard link其實是個檔案，symbolic link則是連結]
    
    到這裡為止，就算大功告成了，可以打python看看，看出來的python版本是不是3.6.3
 
