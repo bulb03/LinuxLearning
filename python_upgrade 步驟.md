@@ -40,7 +40,9 @@ linux：cent os 7，minimal os
 先整理一下到目前為止的狀態：centos中應該有python2.7(在/usr/bin/Python2.7) 和 python3.6.3(在/usr/local/bin/python3)，但同時也會發現，有東西是寫：
 
 lrwxrwxrwx.  1 root root         9 Dec  4 10:28 python2 -> python2.7
+
 -rwxr-xr-x.  1 root root      7136 Aug  4 08:40 python2.7
+
 lrwxrwxrwx.  1 root root         7 Dec  4 10:28 python -> python2
 
 這些又是甚麼?這些東西叫做連結，有點像windows的捷徑，所以當我們下"python"時，會連結到python2，python2再連到python2.7這檔案，所以，要怎麼讓下python
@@ -56,7 +58,8 @@ lrwxrwxrwx.  1 root root         7 Dec  4 10:28 python -> python2
    如此一來，就變python.bak指向python2了
    
    接下來，我們就要重新創造/usr/bin/python來指向python3了：
-   指令：**ln -s /usr/bin/python /usr/local/bin/python3** (-s 代表建立一個symbolic連結，差異請自行google鳥哥，我不想誤人子弟XD)
+   指令：**ln -s /usr/bin/python /usr/local/bin/python3**
+   (-s 代表建立一個symbolic連結，差異請自行google鳥哥，我不想誤人子弟XD)
    
    [後記：symbolic link和hard link最大的差異就在於即使hard link連結的檔案被刪掉，hard link本身也依舊有東西(就像是複製檔案到hard link裡一樣)
    symbolic link則不一樣，連結的檔案被刪掉後，它就沒有用了，從格式也可以發現：hard link其實是個檔案，symbolic link則是連結]
