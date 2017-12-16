@@ -1,0 +1,34 @@
+註：/:root目錄
+
+$ ls / > ls.txt => 會將ls /的結果寫入ls.txt
+
+$ cat ls.txt => 顯示ls.txt
+
+bin
+boot
+dev
+etc
+home
+lib
+lib64
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+
+$ ls /123 2> ls.txt => 會出現ls: cannot access /123: No such file or directory並覆蓋掉ls.txt原本的資料
+$ cat ls.txt => ls.txt的內容
+ls: cannot access /123: No such file or directory
+$ ls / > ls.txt => 再次寫入ls /的結果
+$ ls /123 > ls.txt => 因為不是打ls /123 2> ls.txt，所以會照常出現ls: cannot access /123: No such file or directory，但結果不寫入ls.txt，只會以空白覆蓋
+ls: cannot access /123: No such file or directory
+$ cat ls.txt => 被覆蓋了
+$ 
