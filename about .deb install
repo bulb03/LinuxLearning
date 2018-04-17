@@ -1,0 +1,6 @@
+.deb, is a type of file in Debian
+
+
+Install .deb file
+-------------------
+If you want to install *.deb file, you just type **"dpkg -i filename.deb"** in terminal
