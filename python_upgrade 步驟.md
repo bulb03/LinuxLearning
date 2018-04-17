@@ -71,7 +71,7 @@ lrwxrwxrwx.  1 root root         7 Dec  4 10:28 python -> python2
    如此一來，就變python.bak指向python2了
    
    接下來，我們就要重新創造/usr/bin/python來指向python3了：
-   指令：**ln -s /usr/local/bin/python3.6 /usr/bin/python**
+   指令：**ln -s /usr/local/bin/python3.6  /usr/bin/python**
    
    (-s 代表建立一個symbolic連結，差異請自行google鳥哥，我不想誤人子弟XD)
    
