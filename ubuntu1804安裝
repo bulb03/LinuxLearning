@@ -1,0 +1,4 @@
+本次安裝參考以下網址：https://min-sheng.github.io/teaching/UEFI_%E9%9B%99%E7%A1%AC%E7%A2%9F%E5%AE%89%E8%A3%9D_Win-10_x_Ubuntu_16.04_%E9%9B%99%E7%B3%BB%E7%B5%B1%E6%95%99%E5%AD%B8/
+
+安裝完成後，卻發現boot manager找不到ubuntu的，最後找到這篇文章，解決了問題：https://blog.itswincer.com/posts/ad42f575/
+該文章中的"替換引導文件"部分
